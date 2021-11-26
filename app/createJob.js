@@ -1,45 +1,34 @@
-genJob.addEventListener("click", async (e)=>{
 
-    // e.preventDefault();
+window.addEventListener("load", (e) =>{
+    var cpid = document.getElementById("id");     
+    var cs = document.getElementById("s"); 
+    var cp = document.getElementById("priority"); 
+    var ccont = document.getElementById("typeProcess");
+    var cnumOfProcesses = 0;
+    let cjob = ["jobID"+jobID++, generaterandomNumber(1, 5),[],0]
+    genJob.addEventListener("click", async (e)=>{
 
-    
-
-
-    numOfProcesses = generaterandomNumber(1, 7);
-    //console.log(numOfProcesses)
-    const job = ["jobID"+jobID++, generaterandomNumber(1, 5),[],0]
-    
-
-    for(i=0; i< numOfProcesses; i++){
-        se = generaterandomNumber(6, 31)
-
-        const process = {ID: "processID"+id++, s: se, priority: generaterandomNumber(1, 5), content: [generaterandomNumber(0, 2)], e: 0, w: 0, o:order++};
-        
+        e.preventDefault();
+        const process = {ID: "processID"+parseInt(cpid.value), s: parseInt(cs.value), priority: parseInt(cp.value), content: [generaterandomNumber(0, 2)], e: 0, w: 0, o:order++};
         if(process.content[0] == 1){
-            process.content.push(generaterandomNumber(1, se-3))
+            process.content.push(generaterandomNumber(1, parseInt(cs.value)-3))
         }
-        
-        job[2].push(process)       
-    }
+        cjob[2].push(process)
+        cnumOfProcesses++;
+        console.log(cnumOfProcesses);
+        console.log(cjob);
+    });
 
-
-
-
-
-
-
-
-
-    // console.log(countSpace(batchArray[0]))
-
-    for(i=0; i< batchArray[0].length; i++){
-        if (batchArray[0][i] == 0){
-            batchArray[0][i] = job;
-            batchJobs[i].innerHTML = `<img src='images/process.png' class='processImg' id="${job[0].ID}">`
-            break;               
+    finc.addEventListener("click",async (e) =>{
+        e.preventDefault();
+        for(i=0; i< batchArray[0].length; i++){
+            if (batchArray[0][i] == 0){
+                batchArray[0][i] = cjob;
+                batchJobs[i].innerHTML = `<img src='images/process.png' class='processImg' id="${cjob[0].ID}">`
+                break;               
+            }
         }
-    }      
 
-    //console.log(batchArray)
-    
+        cnumOfProcesses = 0;
+    } );
 });

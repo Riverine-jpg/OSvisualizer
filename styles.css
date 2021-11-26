@@ -113,6 +113,14 @@ input.procInfoField {
     height: 60px;
 }
 
+#finish {
+    top: 360px;
+    left:30px;
+    background-color: rgb(184, 85, 102);
+    width: 170px;
+    height: 60px;
+}
+
 .processImg{
     width:50px;
     display: block;
@@ -1002,7 +1010,14 @@ hr.cnode.cnode0 {
 
 
 button#generateJob {
-    right: 18%;
+    right: 32%;
+}
+button#Startsim {
+    right: 2%;
+}
+
+button#createJob {
+    right: 19%;
 }
 
 select#algo {
