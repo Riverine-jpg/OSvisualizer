@@ -14,9 +14,10 @@ body {
     filter: drop-shadow(0px 0px 0px #00000033);
     position: absolute;
     right: 5%;
-    top: 110px;
+    top: 76px;
     padding: 30px;
     display: none;
+    z-index: 99;
 }
 
 
@@ -187,6 +188,7 @@ header {
 
 
 main{
+    z-index: -1;
     grid-area: main;
     height: 653px;
     margin-left: 30px;
@@ -1072,4 +1074,29 @@ div#operatingSystem {
 
 .active{
     color: #03a9f4;
+}
+
+
+/*new css*/
+button#generateJob {
+    right: 32%;
+}
+button#Startsim {
+    right: 2%;
+}
+
+button#createJob {
+    right: 19%;
+}
+
+select#algo {
+    left: 122px;
+}
+
+#finish {
+    top: 360px;
+    left:30px;
+    background-color: #04AA6D;
+    width: 170px;
+    height: 60px;
 }

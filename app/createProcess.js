@@ -20,6 +20,10 @@ var blockData;
 var susData;
 
 var genProcess;
+let genJob;
+let finc;
+
+//added new button "finish creation"(finish) to add the job to the queue thingie when all processes have been added
 
 var consoleMin;
 
@@ -29,7 +33,8 @@ window.addEventListener("load", (e)=>{
 
     
     genProcess= document.getElementById("generateJob");
-
+    genJob = document.getElementById("generateProcess");
+    finc = document.getElementById("finish");
     processorData = document.getElementById("proccessorBody");
     readyData = document.getElementsByClassName("rbody");
     batchData = document.getElementsByClassName("jbody");

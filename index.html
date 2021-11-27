@@ -14,6 +14,8 @@
         <header>
                 <div id="header-container">
                     <button id="generateJob">Generate Job</button>
+                    <button id="createJob">Create Job</button>
+                    <button id="Startsim">Start Simulation</button>
                     <img src="images/logo.gif" alt="" id="logo">
                     <select name="algo" id="algo">
                         <option value="srt" >SRT</option>
@@ -31,26 +33,26 @@
                     </ul> -->
                 </div>
 
-                <!-- <div class="create-process-panel-container">
+                <div class="create-process-panel-container">
 
-                    <div class="nav">
-                        <form action="" class="form" id="createProcessForm">
-                            <h6>Process Information</h6>
-                            <input type="number" placeholder="Identifier" id="id" required>
-                            <input type="number" placeholder="Service Time" id="s" class= "procInfoField" required>
-                            <input type="number" placeholder="Priority" id="priority" class= "procInfoField" min="0" max="5" required>
+                  <div class="nav">
+                      <form action="" class="form" id="createProcessForm">
+                          <h6>Process Information</h6>
+                          <input type="number" placeholder="Identifier" id="id" required>
+                          <input type="number" placeholder="Service Time" id="s" class= "procInfoField" min="5" max="30"required>
+                          <input type="number" placeholder="Priority" id="priority" class= "procInfoField" min="0" max="5" required>
 
-                            <h6>Process Content</h6>
-                            <select name="" id="typeProcess"  required>
-                                <option value="0" selected>No I/O Interrupt</option>
-                                <option value="1">I/O Interrupt</option>
-                            </select>
-                            
-                            <input type="submit" id="generateProcess" class="gproc" value="Generate Process">
-                        </form>
-                    </div>
-                    
-                </div> -->
+                          <h6>Process Content</h6>
+                          <select name="" id="typeProcess"  required>
+                              <option value="0" selected>No I/O Interrupt</option>
+                              <option value="1">I/O Interrupt</option>
+                          </select>
+                          <input type="submit" id="finish" class="gproc" value="Finish creation">
+                          <input type="submit" id="generateProcess" class="gproc" value="Generate Process">
+                      </form>
+                  </div>
+                  
+              </div>
             </header>
             
             <main>
@@ -542,6 +544,7 @@
 <script src="app/selectionAlgo.js"></script>
 <script src="app/menuNav.js"></script>
 <script src="app/consoleSimulation.js"></script>
+<script src="app/createJob.js"></script>
 </body>
 </html>
 
